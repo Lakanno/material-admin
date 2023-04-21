@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -7,15 +7,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input()
-  isMenuOpened: boolean = false;
+  @Input()isMenuOpened: boolean = false;
 
+  @Output() isShowSidebar = new EventEmitter<boolean>();
   public user$!: Observable<any>
-  signOut(){
 
+  public openMenu():void{
+    this.isMenuOpened = !this.isMenuOpened;
+    this.isShowSidebar.emit(this.isMenuOpened);
   }
 
-  openMenu(){
-    
+  public signOut():void{
+    alert('sign out');
   }
+
 }

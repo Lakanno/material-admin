@@ -1,27 +1,7 @@
 <app-header (isShowSidebar)="drawer.toggle($event)"></app-header>
 <mat-drawer-container class="drawer-container" autosize>
     <mat-drawer #drawer class="drawer-sidenav" mode="side">
-        <button mat-menu-item class="drawer__icon-btn">
-          <mat-icon class="menu-icon">person</mat-icon>Profile
-        </button>
-        <button mat-menu-item class="drawer__icon-btn">
-          <mat-icon class="menu-icon">description</mat-icon>Tasks
-        </button>
-        <button mat-menu-item class="drawer__icon-btn">
-          <mat-icon class="menu-icon">email</mat-icon>Messages
-        </button>
-        <button mat-menu-item class="drawer__icon-btn">
-            <mat-icon class="menu-icon">sentiment_very_satisfied</mat-icon>satisfied
-        </button>
-        <button mat-menu-item class="drawer__icon-btn">
-            <mat-icon class="menu-icon">business_center</mat-icon>business_center
-        </button>
-        <button mat-menu-item class="drawer__icon-btn">
-            <mat-icon class="menu-icon">adb</mat-icon>adb
-        </button>
-        <button mat-menu-item class="drawer__icon-btn">
-            <mat-icon class="menu-icon">shopping_cart</mat-icon> shopping_cart
-        </button>
+        <app-sidebar></app-sidebar>
     </mat-drawer>
     <div class="sidenav-content">
 

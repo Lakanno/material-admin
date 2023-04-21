@@ -10,20 +10,6 @@
   margin-top: 64px;
   padding: 10px;
 
-  .drawer{
-    &__icon-btn {
-        .menu-icon{
-            color: $light-grey;
-        }
-        &:hover {
-          background-color: $blue-white;
-          & .menu-icon {
-            color: #536DFE;
-          }
-        }
-    }
-  }
-
   @media (max-width: $small) {
     width: 200px;
   }

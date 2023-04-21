@@ -1,0 +1,30 @@
+<app-header (isShowSidebar)="drawer.toggle($event)"></app-header>
+<mat-drawer-container class="drawer-container" autosize>
+    <mat-drawer #drawer class="drawer-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p >Lorem, ipsum dolor sit amet consectetur.</p>
+        <ul>
+            <li>
+                <button mat-raised-button color="accent">Accent</button>
+            </li>
+            <li>first 2</li>
+            <li>first 3</li>
+            <li>first 4</li>
+        </ul>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+        <section>
+            <div class="example-label">Raised</div>
+            <div class="example-button-row">
+              <button mat-raised-button>Basic</button>
+              <button mat-raised-button color="primary">Primary</button>
+              <button mat-raised-button color="accent">Accent</button>
+              <button mat-raised-button color="warn">Warn</button>
+              <button mat-raised-button disabled>Disabled</button>
+              <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+            </div>
+          </section>
+    </div>
+  
+  </mat-drawer-container>

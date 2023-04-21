@@ -8,8 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent {
   @Input()isMenuOpened: boolean = false;
-
-  @Output() isShowSidebar = new EventEmitter<boolean>();
+  @Output()isShowSidebar = new EventEmitter<boolean>();
   public user$!: Observable<any>
 
   public openMenu():void{

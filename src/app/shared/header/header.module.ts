@@ -30,7 +30,7 @@ import { HeaderComponent } from './containers/header/header.component';
     MatButtonModule,
     MatBadgeModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
   exports: [
     UserComponent,

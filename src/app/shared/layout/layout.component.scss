@@ -1,0 +1,27 @@
+@import "src/app/styles/colors";
+@import "src/app/styles/sizes";
+
+.drawer-container {
+  width: 100%;
+}
+
+.drawer-sidenav {
+  height:calc(100vh - 64px);
+  margin-top: 64px;
+  padding: 10px;
+
+  @media (max-width: $small) {
+    width: 218px;
+  }
+}
+
+.sidenav-content {
+  background-color: $background-color;
+  height:calc(100vh - 64px);
+  margin-top: 64px;
+  padding: 10px;
+
+  @media (max-width: $small) {
+    width: 100%;
+  }
+}

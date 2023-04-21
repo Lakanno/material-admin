@@ -1,16 +1,25 @@
 @import "src/app/styles/colors";
 @import "src/app/styles/sizes";
 
-.drawer{
-    &__icon-btn {
-        .menu-icon{
-            color: $light-grey;
-        }
-        &:hover {
-          background-color: $blue-white;
-          & .menu-icon {
-            color: #536DFE;
+
+.navbar{
+    &__list-item{
+        margin-top: 15px;
+
+        .drawer{
+            &__icon-btn {
+                .menu-icon{
+                    color: $light-grey;
+                }
+                &:hover {
+                  background-color: $blue-white;
+                  & .menu-icon {
+                    color: #536DFE;
+                  }
+                }
+            }
           }
-        }
     }
-  }
+}
+
+

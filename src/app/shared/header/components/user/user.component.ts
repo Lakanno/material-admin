@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { routes } from 'src/app/consts/routes';
 
 @Component({
   selector: 'app-user',

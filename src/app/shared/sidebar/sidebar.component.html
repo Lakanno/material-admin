@@ -1,24 +1,15 @@
-<div>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">person</mat-icon>Profile
-    </button>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">description</mat-icon>Tasks
-    </button>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">email</mat-icon>Messages
-    </button>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">sentiment_very_satisfied</mat-icon>satisfied
-    </button>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">business_center</mat-icon>business_center
-    </button>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">adb</mat-icon>adb
-    </button>
-    <button mat-menu-item class="drawer__icon-btn">
-        <mat-icon class="menu-icon">shopping_cart</mat-icon> shopping_cart
-    </button>
-</div>
+<mat-list>
+    <mat-list-item [routerLink]="[routes.DASHBOARD]" routerLinkActive="active" class="navbar__list-item">
+        <button mat-menu-item class="drawer__icon-btn">
+            <mat-icon class="menu-icon">home</mat-icon> Dashboard
+        </button>
+    </mat-list-item>
+
+    <mat-list-item class="navbar__list-item">
+        <button mat-menu-item class="drawer__icon-btn" >
+            <mat-icon class="menu-icon">description</mat-icon> Description
+        </button>
+    </mat-list-item>
+</mat-list>
+  
 

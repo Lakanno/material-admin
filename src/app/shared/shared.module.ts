@@ -5,6 +5,9 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 
@@ -17,6 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderModule,
     MatSidenavModule,
     MatButtonModule,
+    MatMenuModule,
+    MatIconModule
   ],
   exports: [
     HeaderModule,

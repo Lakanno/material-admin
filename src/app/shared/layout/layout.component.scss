@@ -10,16 +10,32 @@
   margin-top: 64px;
   padding: 10px;
 
+  .drawer{
+    &__icon-btn {
+        .menu-icon{
+            color: $light-grey;
+        }
+        &:hover {
+          background-color: $blue-white;
+          & .menu-icon {
+            color: #536DFE;
+          }
+        }
+    }
+  }
+
   @media (max-width: $small) {
-    width: 218px;
+    width: 200px;
   }
 }
+
 
 .sidenav-content {
   background-color: $background-color;
   height:calc(100vh - 64px);
   margin-top: 64px;
-  padding: 10px;
+  padding: 5px;
+
 
   @media (max-width: $small) {
     width: 100%;

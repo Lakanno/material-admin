@@ -24,7 +24,6 @@ export class SidebarComponent {
   treeControl = new NestedTreeControl<ENode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<ENode>();
 
-
   public routes: typeof routes = routes;
   public isOpenUiElements = false;
 
@@ -32,7 +31,6 @@ export class SidebarComponent {
   constructor() {
     this.dataSource.data = TREE_DATA;
   }
-
 
   public openUiElements() {
     this.isOpenUiElements = !this.isOpenUiElements;

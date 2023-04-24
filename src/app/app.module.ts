@@ -11,6 +11,7 @@ import { NotFoundComponent } from './pages/not-found/not-found/not-found.compone
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ProfileModule } from './pages/profile/profile.module';
+import { CommerceModule } from './pages/commerce/commerce.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProfileModule } from './pages/profile/profile.module';
     DashboardModule,
     SharedModule,
     ProfileModule,
+    CommerceModule,
 
     MatCardModule,
     MatButtonModule

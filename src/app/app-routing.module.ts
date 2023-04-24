@@ -27,6 +27,11 @@ const routes: Routes = [
       ),
   },
 
+  {
+    path: 'commerce',
+    loadChildren: () => import('./pages/commerce/commerce.module').then(m => m.CommerceModule)
+  },
+
   
   {
     path: '**',

@@ -9,11 +9,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ManageComponent } from './components/manage/manage.component';
+import { GridComponent } from './components/grid/grid.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
 
 
 @NgModule({
   declarations: [
-    CommercePageComponent
+    CommercePageComponent,
+    
+    ManageComponent,
+    GridComponent,
+    ProductPageComponent
   ],
   imports: [
     CommonModule,

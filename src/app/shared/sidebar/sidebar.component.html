@@ -15,7 +15,7 @@
 
     <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="mat-tree" >
 
-        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle class="mat-tree-node">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle class="mat-tree-node" (click)="logNode(node)">
             {{node.name}}
         </mat-tree-node>
 
@@ -35,6 +35,10 @@
               <ng-container matTreeNodeOutlet></ng-container>
           </div>
         </mat-nested-tree-node>
+
+        <mat-tree-node *matTreeNodeDef="let node; when: isLeaf" [routerLink]="[node.routerLink]">
+            <span>{{node.name}}</span>
+        </mat-tree-node>
     </mat-tree>
 
 
@@ -47,6 +51,9 @@
     </mat-list-item>
 
    <hr class="hr" style="border-top: 0px solid rgb(185, 183, 183); margin-top: 20px;">
+  
+
+
     
 </mat-list>
 

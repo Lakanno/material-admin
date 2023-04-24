@@ -26,12 +26,15 @@ const routes: Routes = [
         (m) => m.ProfileModule
       ),
   },
-
   {
     path: 'commerce',
     loadChildren: () => import('./pages/commerce/commerce.module').then(m => m.CommerceModule)
   },
 
+  {
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule)
+  },
   
   {
     path: '**',

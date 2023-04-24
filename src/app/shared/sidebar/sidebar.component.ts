@@ -19,9 +19,9 @@ const TREE_DATA: IMatNode[] = [
   {
     name: 'Users',
     children: [
-      {name: 'User 1', routerLink: routes.PROFILE},
-      {name: 'User 2', routerLink: routes.DASHBOARD}, 
-      {name: 'User 3', routerLink: routes.PROFILE}
+      {name: 'User add', routerLink: routes.USER_ADD},
+      {name: 'User edit', routerLink: routes.USER_EDIT}, 
+      {name: 'User list', routerLink: routes.USER_LIST}
     ],
     icon: 'supervised_user_circle'
   },

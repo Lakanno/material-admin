@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
 import { routes } from '../../consts/routes';
 
-interface FoodNode {
+interface ENode {
   name: string;
-  children?: FoodNode[];
+  children?: ENode[];
 }
 
-const TREE_DATA: FoodNode[] = [
+const TREE_DATA: ENode[] = [
   {
     name: 'E-commerce',
     children: [{name: 'Product Manager'}, {name: 'Products Grid'}, {name: 'Product page'}],
@@ -21,8 +21,8 @@ const TREE_DATA: FoodNode[] = [
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  treeControl = new NestedTreeControl<FoodNode>(node => node.children);
-  dataSource = new MatTreeNestedDataSource<FoodNode>();
+  treeControl = new NestedTreeControl<ENode>(node => node.children);
+  dataSource = new MatTreeNestedDataSource<ENode>();
 
 
   public routes: typeof routes = routes;
@@ -38,6 +38,6 @@ export class SidebarComponent {
     this.isOpenUiElements = !this.isOpenUiElements;
   }
 
-  hasChild = (_: number, node: FoodNode) => !!node.children && node.children.length > 0;
+  hasChild = (_: number, node: ENode) => !!node.children && node.children.length > 0;
 
 }

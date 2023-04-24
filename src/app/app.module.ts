@@ -10,11 +10,12 @@ import { NotFoundComponent } from './pages/not-found/not-found/not-found.compone
 
 import { MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { ProfileModule } from './pages/profile/profile.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     DashboardModule,
     SharedModule,
+    ProfileModule,
 
     MatCardModule,
     MatButtonModule

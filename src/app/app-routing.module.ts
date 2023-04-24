@@ -1,20 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/containers/dashboard/dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found/not-found.component';
+import { ProfilePageComponent } from './pages/profile/containers/profile-page/profile-page.component';
 
-const routes: Routes = [  {
-  path: 'dashboard',
-  pathMatch: 'full',
-  loadChildren: () =>
-    import('./pages/dashboard/dashboard.module').then(
-      (m) => m.DashboardModule
-    ),
-  },
+const routes: Routes = [ 
   {
     path: '',
-    component: DashboardComponent
+    component: ProfilePageComponent
   },
+
+  {
+    path: 'dashboard',
+    pathMatch: 'full',
+    loadChildren: () =>
+      import('./pages/dashboard/dashboard.module').then(
+        (m) => m.DashboardModule
+      ),
+  },
+
+  {
+    path: 'profile',
+    pathMatch: 'full',
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then(
+        (m) => m.ProfileModule
+      ),
+  },
+
   {
     path: '**',
     component: NotFoundComponent

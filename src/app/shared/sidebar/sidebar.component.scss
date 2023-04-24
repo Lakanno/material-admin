@@ -3,8 +3,11 @@
 
 
 .navbar{
+    color: $light-grey;
     &__list-item{
-        margin-top: 15px;
+        margin-top: 5px;
+        width: 100%;
+    
 
         .drawer{
             &__icon-btn {
@@ -23,3 +26,37 @@
 }
 
 
+.mat-tree{
+        ul,li{
+            margin-top: 0;
+            margin-bottom: 0;
+            
+        }
+        .mat-tree-node{
+            margin-left: 20px;
+            cursor: pointer;
+            color: $light-grey;
+            &:hover {
+                background-color: $blue-white;
+                & .mat-tree-icon {
+                  color: #536DFE;
+                }
+              }
+
+            .mat-tree-icon{
+                margin-right: 10px;
+            }
+        }
+    div[role=group] > .mat-tree-node {
+        padding-left: 40px;
+        }
+
+    .mat-tree-nested{
+        div[role=group]{
+            padding-left: 20px;
+        }
+        .mat-tree-invisible {
+            display: none;
+            }
+    }
+}

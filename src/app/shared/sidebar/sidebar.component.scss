@@ -7,8 +7,6 @@
     &__list-item{
         margin-top: 5px;
         width: 100%;
-    
-
         .drawer{
             &__icon-btn {
                 .menu-icon{
@@ -36,6 +34,7 @@
             margin-left: 20px;
             cursor: pointer;
             color: $light-grey;
+            padding-left: 15px;
             &:hover {
                 background-color: $blue-white;
                 & .mat-tree-icon {

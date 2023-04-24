@@ -9,8 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatTreeModule} from '@angular/material/tree';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTreeModule } from '@angular/material/tree';
 
 // components imports
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -32,7 +32,7 @@ import { LayoutComponent } from './layout/layout.component';
     MatIconModule,
     MatListModule,
     MatExpansionModule,
-    MatTreeModule
+    MatTreeModule,
   ],
   exports: [
     HeaderModule,

@@ -3,20 +3,24 @@ import { Component } from '@angular/core';
 import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
 import { Router } from '@angular/router';
 import { routes } from '../../consts/routes';
+import { IMatNode } from '../models/mat-tree.interface';
 
-interface ENode {
-  name: string;
-  children?: ENode[];
-  routerLink?: string;
-}
-
-const TREE_DATA: ENode[] = [
+const TREE_DATA: IMatNode[] = [
   {
     name: 'E-commerce',
     children: [
       {name: 'Product Manager', routerLink: routes.COMMERCE_MANAGE},
       {name: 'Products Grid', routerLink: routes.COMMERCE_GRID}, 
       {name: 'Product page', routerLink: routes.COMMERCE_PAGE}
+    ],
+  },
+
+  {
+    name: 'Users',
+    children: [
+      {name: 'User 1', routerLink: routes.PROFILE},
+      {name: 'User 2', routerLink: routes.DASHBOARD}, 
+      {name: 'User 3', routerLink: routes.PROFILE}
     ],
   },
 ];
@@ -27,8 +31,8 @@ const TREE_DATA: ENode[] = [
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  treeControl = new NestedTreeControl<ENode>(node => node.children);
-  dataSource = new MatTreeNestedDataSource<ENode>();
+  treeControl = new NestedTreeControl<IMatNode>(node => node.children);
+  dataSource = new MatTreeNestedDataSource<IMatNode>();
 
 
   public routes: typeof routes = routes;
@@ -44,12 +48,10 @@ export class SidebarComponent {
     this.isOpenUiElements = !this.isOpenUiElements;
   }
 
-  hasChild = (_: number, node: ENode) => !!node.children && node.children.length > 0;
+  hasChild = (_: number, node: IMatNode) => !!node.children && node.children.length > 0;
 
-  isLeaf =(_: number, node: ENode) => !node.children || !node.routerLink;
+  isLeaf =(_: number, node: IMatNode) => !node.children || !node.routerLink;
 
-  logNode(n: any){
-    console.log(n);
-  }
+
 
 }

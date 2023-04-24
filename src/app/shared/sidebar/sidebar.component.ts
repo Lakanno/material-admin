@@ -9,10 +9,11 @@ const TREE_DATA: IMatNode[] = [
   {
     name: 'E-commerce',
     children: [
-      {name: 'Product Manager', routerLink: routes.COMMERCE_MANAGE},
-      {name: 'Products Grid', routerLink: routes.COMMERCE_GRID}, 
-      {name: 'Product page', routerLink: routes.COMMERCE_PAGE}
+      {name: 'Product Manager', routerLink: routes.COMMERCE_MANAGE, },
+      {name: 'Products Grid', routerLink: routes.COMMERCE_GRID, }, 
+      {name: 'Product page', routerLink: routes.COMMERCE_PAGE,}
     ],
+    icon: 'shopping_cart'
   },
 
   {
@@ -22,6 +23,7 @@ const TREE_DATA: IMatNode[] = [
       {name: 'User 2', routerLink: routes.DASHBOARD}, 
       {name: 'User 3', routerLink: routes.PROFILE}
     ],
+    icon: 'supervised_user_circle'
   },
 ];
 

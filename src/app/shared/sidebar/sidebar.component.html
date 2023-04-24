@@ -1,5 +1,4 @@
 <mat-list>
-
     <mat-list-item [routerLink]="[routes.PROFILE]" routerLinkActive="active" class="navbar__list-item">
         <button mat-menu-item class="drawer__icon-btn" >
             <mat-icon class="menu-icon">people</mat-icon>Profile
@@ -22,7 +21,7 @@
         <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild" class="mat-tree-nested">
                 <div class="mat-tree-node"  matTreeNodeToggle
                 [attr.aria-label]="'Toggle ' + node.name">
-                    <mat-icon class="mat-tree-icon">shopping_cart</mat-icon>
+                    <mat-icon class="mat-tree-icon">{{node.icon}}</mat-icon>
                     {{node.name}}
                   <button  mat-icon-button >
                     <mat-icon class="mat-icon-rtl-mirror">
@@ -35,26 +34,17 @@
               <ng-container matTreeNodeOutlet></ng-container>
           </div>
         </mat-nested-tree-node>
-
         <mat-tree-node *matTreeNodeDef="let node; when: isLeaf" [routerLink]="[node.routerLink]">
             <span>{{node.name}}</span>
         </mat-tree-node>
     </mat-tree>
-
-
- 
 
     <mat-list-item class="navbar__list-item">
         <button mat-menu-item class="drawer__icon-btn" >
             <mat-icon  class="menu-icon">description</mat-icon>Documentation
         </button>
     </mat-list-item>
-
    <hr class="hr" style="border-top: 0px solid rgb(185, 183, 183); margin-top: 20px;">
-  
-
-
-    
 </mat-list>
 
 

@@ -1,0 +1,26 @@
+
+@import "src/app/styles/colors";
+@import "src/app/styles/sizes";
+
+.login-form-container{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    .email-container{
+        width: 100%;
+    }
+    .password-container{
+        width: 100%;
+    }
+    .btn-conainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .a-tag{
+            text-decoration: none;
+            font-size: 12px;
+            font-style: italic;
+        }
+    }
+}

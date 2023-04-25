@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProfileModule } from './pages/profile/profile.module';
 import { CommerceModule } from './pages/commerce/commerce.module';
 import { UserModule } from './pages/user/user.module';
+import { AuthModule } from './pages/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UserModule } from './pages/user/user.module';
     ProfileModule,
     CommerceModule,
     UserModule,
+    AuthModule,
 
     MatCardModule,
     MatButtonModule

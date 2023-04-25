@@ -1,1 +1,36 @@
-<p>register works!</p>
+
+<form [formGroup]="registerForm" class="register-form-container" (ngSubmit)="onRegister()">
+    <h1 style="text-align: center; font-weight: 900;">Welcome !</h1>
+    <h3 style="text-align: center; font-weight: 900;">Create you account</h3>
+    <div>
+        <mat-form-field appearance="fill" class="email-container">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="example@email.com" formControlName="email" required>
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill" class="password-container" >
+            <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" >
+                <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'hidePassword password'" [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+          </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field appearance="fill" class="password-container" >
+            <mat-label>Confirm your password</mat-label>
+                <input matInput [type]="hideConfirmPassword ? 'password' : 'text'" formControlName="confirmPassword" >
+                <mat-error *ngIf="confirmPassword.invalid">{{getConfirmPasswordErrorMessage()}}</mat-error>
+                <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword" [attr.aria-label]="'hideConfirmPassword password'" [attr.aria-pressed]="hideConfirmPassword">
+                <mat-icon>{{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+          </mat-form-field>
+    </div>
+    <div class="btn-conainer">
+        <button mat-raised-button color="primary">Register</button>
+    </div>
+</form>

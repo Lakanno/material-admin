@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent {
   hide:boolean = true;
+  @Output() sendLoginForm = new EventEmitter<void>();
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -37,7 +38,9 @@ export class LoginComponent {
     return this.password.hasError('password') ? 'Not a valid password' : '';
   }
 
-  onSignIn(){
-    alert('Sign In');
+  onSignIn(): void{
+    if (this.loginForm.valid) {
+      this.sendLoginForm.emit();
+    }
   }
 }

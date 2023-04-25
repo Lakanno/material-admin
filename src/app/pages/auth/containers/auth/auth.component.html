@@ -5,8 +5,13 @@
     
 <div class="tab-auth">
     <mat-tab-group>
-        <mat-tab label="Login"> <app-login></app-login></mat-tab>
-        <mat-tab label="New User"><app-register></app-register> </mat-tab>
+        <mat-tab label="Login" >
+             <app-login (sendLoginForm)="sendLoginForm()"></app-login>
+        </mat-tab>
+
+        <mat-tab label="New User">
+            <app-register (sendRegisterForm)="sendRegisterForm()"></app-register>
+        </mat-tab>
       </mat-tab-group>
 </div>
 

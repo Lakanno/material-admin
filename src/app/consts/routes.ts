@@ -10,6 +10,8 @@ export enum routes {
     USER_ADD = '/user/add',
     USER_EDIT = '/user/edit',
 
-    LOGIN = '/login'
+    AUTH = '/auth',
+    AUTH_LOGIN = '/auth/login',
+    AUTH_REGISTER = '/auth/register',
 }
   

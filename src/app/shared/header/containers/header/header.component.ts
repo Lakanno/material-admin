@@ -24,7 +24,7 @@ export class HeaderComponent {
   }
 
   public signOut():void{
-    this.router.navigate([this.routers.LOGIN]);
+    this.router.navigate([this.routers.AUTH]);
   }
 
 }

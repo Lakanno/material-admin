@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -11,6 +12,10 @@ export class RegisterComponent {
   hideConfirmPassword: boolean = true;
 
   @Output() sendRegisterForm = new EventEmitter<void>();
+
+  constructor(private authService: AuthService){
+
+  }
 
 
   registerForm = new FormGroup({
@@ -52,7 +57,14 @@ export class RegisterComponent {
   }
   onRegister(){
     if (this.registerForm.valid && this.password.value === this.confirmPassword.value) {
-      this.sendRegisterForm.emit();
+      this.authService.login(this.registerForm.value).subscribe((result) =>{
+        this.sendRegisterForm.emit();
+      },
+      (err: Error) =>{
+        alert(err.message);
+      })
+    }else{
+      alert('Error');
     }
   }
 }

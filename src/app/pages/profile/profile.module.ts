@@ -6,6 +6,7 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 
 import { SharedModule } from "../../shared/shared.module";
 
@@ -20,6 +21,7 @@ import { SharedModule } from "../../shared/shared.module";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatTableModule,
 
     ProfileRoutingModule
   ],

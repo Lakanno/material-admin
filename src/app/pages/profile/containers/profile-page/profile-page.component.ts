@@ -7,6 +7,9 @@ import { UserService } from 'src/app/pages/auth/services/user.service';
   styleUrls: ['./profile-page.component.scss']
 })
 export class ProfilePageComponent {
+  userSource: any = [];
+  displayedColumns: string[] = ['name', 'username',];
+
   constructor(private userService: UserService){
     this.getUsersData();
 
@@ -15,6 +18,7 @@ export class ProfilePageComponent {
   getUsersData(){
     this.userService.getUsers().subscribe((users)=>{
       console.log(users);
+      this.userSource = users;
       
     })
   }

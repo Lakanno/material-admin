@@ -6,7 +6,7 @@ import { ProfilePageComponent } from './pages/profile/containers/profile-page/pr
 const routes: Routes = [ 
   {
     path: '',
-    component: ProfilePageComponent
+    redirectTo: '/auth', pathMatch: 'full'
   },
 
   {

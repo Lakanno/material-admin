@@ -11,7 +11,7 @@ export class AuthComponent {
   public routes: typeof routes = routes;
 
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   sendLoginForm(){
@@ -21,5 +21,7 @@ export class AuthComponent {
   sendRegisterForm(){
     this.router.navigate([this.routes.PROFILE]).then();
   }
+
+  
 
 }

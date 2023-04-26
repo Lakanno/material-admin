@@ -4,14 +4,14 @@
     <div>
         <mat-form-field appearance="fill" class="email-container">
             <mat-label>Enter your email</mat-label>
-            <input matInput placeholder="example@email.com" formControlName="email" required>
-            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
+            <input matInput placeholder="example@email.com" formControlName="email" required> 
+            <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error> 
         </mat-form-field>
     </div>
     <div>
         <mat-form-field appearance="fill" class="password-container" >
             <mat-label>Enter your password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" >
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" > 
                 <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>

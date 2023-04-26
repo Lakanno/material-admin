@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -7,9 +9,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent  implements OnInit{
   hide:boolean = true;
   @Output() sendLoginForm = new EventEmitter<void>();
+
+  constructor(private authService: AuthService,
+    private router: Router){}
 
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -40,7 +45,20 @@ export class LoginComponent {
 
   onSignIn(): void{
     if (this.loginForm.valid) {
-      this.sendLoginForm.emit();
+      this.authService.login(this.loginForm.value).subscribe((result) =>{
+        console.log(result);
+        this.sendLoginForm.emit();
+      },
+      (err: Error) =>{
+        alert(err.message);
+      })
+
     }
+  }
+
+  ngOnInit(): void {
+    // if(this.authService.isLoggedIn()){
+    //   this.router.navigate(['/profile'])
+    // } 
   }
 }

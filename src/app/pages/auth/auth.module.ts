@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthComponent } from './containers/auth/auth.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -25,12 +26,14 @@ import {MatTabsModule} from '@angular/material/tabs';
     AuthRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+
   ],
   exports: [
     AuthComponent

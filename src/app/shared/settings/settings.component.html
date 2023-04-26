@@ -1,0 +1,24 @@
+<div _ngcontent-eko-c172 aria-haspopup="true" class="mat-menu-trigger settings-wrapper" aria-expanded="true" aria-controls="mat-menu-panel-11"  [matMenuTriggerFor]="settingMenu">
+    <mat-icon _ngcontent-eko-c172  role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">settings</mat-icon>
+</div>
+<mat-menu [hasBackdrop]="true" #settingMenu="matMenu" xPosition="before" >
+    <div class="user-menu-title">
+        <h5 >COLOR THEME</h5>
+    </div>
+    <button mat-menu-item class="user-menu__item-title" (click)="$event.stopPropagation()">
+        <mat-radio-group aria-label="Select an option" (click)="$event.stopPropagation()">
+            <mat-radio-button color="primary" value="1"></mat-radio-button>
+            <mat-radio-button color="warn" value="2"></mat-radio-button>
+            <mat-radio-button color="accent" value="3"></mat-radio-button>
+        </mat-radio-group>
+    </button>
+
+
+    <div class="user-menu-title">
+        <h5>DARK MODE</h5>
+    </div>
+
+    <button mat-menu-item class="user-menu__item-title" (click)="$event.stopPropagation()">
+        <mat-slide-toggle>Dark mode</mat-slide-toggle>
+    </button>
+</mat-menu>

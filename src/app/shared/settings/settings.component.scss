@@ -1,0 +1,90 @@
+.settings-wrapper{
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    top: 120px;
+    right: 0;
+    position: fixed;
+    border-radius: 50% 0 0 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+    background-color: #536dfe;
+}
+
+
+@import 'src/app/styles/colors';
+@import 'src/app/styles/sizes';
+
+.user-button {
+  background-color: $pink;
+  box-shadow: none;
+  margin-left: 16px;
+
+  &__icon {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $pink;
+  }
+
+  @media (max-width: $small) {
+    margin-top: 0;
+  }
+}
+
+.user-menu-title {
+  padding: 16px 48px 0 16px;
+  margin-bottom: 4px;
+
+  &__name {
+    margin-bottom: 4px;
+    font-weight: $fw-lighter;
+    font-size: $fs-large;
+    color: $dark-grey;
+  }
+
+  &__link {
+    color: $blue;
+    font-weight: $fw-lighter;
+    font-size: $fs-small;
+    text-decoration: none;
+  }
+}
+
+.user-menu-icon {
+  color: $light-grey;
+  margin-right: 16px;
+  opacity: .8;
+}
+
+.sign-button-wrapper {
+  text-align: center;
+  padding: 8px 0 16px 0;
+  width: 100%;
+
+}
+
+.sign-button {
+  border: 1px solid $light-blue;
+  width: 70%;
+
+}
+
+.user-menu {
+  &__item-title {
+    color: $light-grey;
+    &:hover {
+      color: $dark-grey;
+      background-color: $blue-white;
+
+      & .user-menu-icon {
+        color: #536DFE;
+      }
+    }
+  }
+}

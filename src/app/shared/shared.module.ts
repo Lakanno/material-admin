@@ -11,15 +11,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatRadioModule } from '@angular/material/radio';
 
 // components imports
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    SidebarComponent
+    SidebarComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +37,8 @@ import { LayoutComponent } from './layout/layout.component';
     MatListModule,
     MatExpansionModule,
     MatTreeModule,
+    MatSlideToggleModule,
+    MatRadioModule
   ],
   exports: [
     HeaderModule,

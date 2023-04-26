@@ -8,7 +8,7 @@ import { UserService } from 'src/app/pages/auth/services/user.service';
 })
 export class ProfilePageComponent {
   userSource: any = [];
-  displayedColumns: string[] = ['name', 'username',];
+  displayedColumns: string[] = ['id' ,'name', 'username', 'email'];
 
   constructor(private userService: UserService){
     this.getUsersData();

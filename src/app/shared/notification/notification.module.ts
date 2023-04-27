@@ -6,6 +6,8 @@ import { SuccessToastComponent } from './components/success-toast/success-toast.
 import { ErrorToastComponent } from './components/error-toast/error-toast.component';
 import { InfoToastComponent } from './components/info-toast/info-toast.component';
 
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,14 @@ import { InfoToastComponent } from './components/info-toast/info-toast.component
   ],
   imports: [
     CommonModule,
-    NotificationRoutingModule
+    NotificationRoutingModule,
+
+    MatButtonModule
+  ],
+  exports: [
+    SuccessToastComponent,
+    ErrorToastComponent,
+    InfoToastComponent
   ]
 })
 export class NotificationModule { }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { ErrorAlertComponent } from '../shared/notifications/error-alert/error-alert.component';
+import { InfoAlertComponent } from '../shared/notifications/info-alert/info-alert.component';
 import { SuccessAlertComponent } from '../shared/notifications/success-alert/success-alert.component';
 
 @Injectable({
@@ -7,24 +9,52 @@ import { SuccessAlertComponent } from '../shared/notifications/success-alert/suc
 })
 
 export class NotificationService {
+  public timeOut = 3000;
 
   constructor(private toastr: ToastrService) {
     
   }
-  
-  successMessage(message: string, title?: string) {
-    this.toastr.success(message, title);
-  }
-  errorMessage(message: string, title?: string) {
-    this.toastr.error(message, title);
+
+  successMessage(){
+    this.toastr.show(
+      'null',
+      'null',
+      {
+        positionClass: 'toast-top-center',
+        toastComponent: SuccessAlertComponent,
+        timeOut: this.timeOut,
+        tapToDismiss: true
+      }
+    );
   }
 
-  warningMessage(message: string, title?: string) {
-    this.toastr.warning(message,title);
+
+  errorMessage() {
+    this.toastr.show(
+      'null',
+      'null',
+      {
+        positionClass: 'toast-top-center',
+        toastComponent: ErrorAlertComponent,
+        timeOut: this.timeOut,
+        tapToDismiss: true
+      }
+    );
   }
 
-  infoMessage(message: string, title?: string) {
-    this.toastr.info(message,title);
+  infoMessage() {
+    this.toastr.show(
+      'null',
+      'null',
+      {
+        positionClass: 'toast-top-center',
+        toastComponent: InfoAlertComponent,
+        timeOut: this.timeOut,
+        tapToDismiss: true,
+      }
+    );
   }
+
+
 
 }

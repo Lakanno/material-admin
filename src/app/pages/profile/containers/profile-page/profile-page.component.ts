@@ -20,12 +20,11 @@ export class ProfilePageComponent {
   getUsersData(){
     this.userService.getUsers().subscribe(
       users => {
-      this.notifyService.successMessage('Successfully fetch data', 'API CALL');
-
+      this.notifyService.successMessage();
       this.userSource = users;
     },
       error => {
-        this.notifyService.errorMessage(`Fatal when fetching data${error}`, 'API CALL');
+        this.notifyService.errorMessage();
       }
     )
   }

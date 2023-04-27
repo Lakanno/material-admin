@@ -16,6 +16,7 @@ import { UserModule } from './pages/user/user.module';
 import { AuthModule } from './pages/auth/auth.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SuccessAlertComponent } from './shared/notifications/success-alert/success-alert.component';
+import { ErrorAlertComponent } from './shared/notifications/error-alert/error-alert.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,7 @@ import { SuccessAlertComponent } from './shared/notifications/success-alert/succ
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
-      toastComponent: SuccessAlertComponent
-    }),
+    ToastrModule.forRoot(),
 
     DashboardModule,
     SharedModule,

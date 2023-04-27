@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Toast, ToastPackage, ToastrService } from 'ngx-toastr';
 
-
 @Component({
-  selector: 'app-success-alert',
-  templateUrl: './success-alert.component.html',
-  styleUrls: ['./success-alert.component.scss'],
+  selector: 'app-info-alert',
+  templateUrl: './info-alert.component.html',
+  styleUrls: ['./info-alert.component.scss'],
   animations: [
     trigger('flyInOut', [
       state('inactive', style({ opacity: 0 })),
@@ -17,22 +16,15 @@ import { Toast, ToastPackage, ToastrService } from 'ngx-toastr';
         animate('{{ easeTime }}ms {{ easing }}')
       ),
       transition(
-        'active => removed',
-        animate('{{ easeTime }}ms {{ easing }}')
+        'active => removed',        animate('{{ easeTime }}ms {{ easing }}')
       )
     ])
   ],
   preserveWhitespaces: false
 })
-
-export class SuccessAlertComponent extends Toast  {
-
-  override message!: string;
+export class InfoAlertComponent extends Toast  {
 
   constructor(protected override toastrService: ToastrService, public override toastPackage: ToastPackage){
     super(toastrService, toastPackage);
   }
-
-  
-
 }

@@ -19,13 +19,17 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SuccessAlertComponent } from './notifications/success-alert/success-alert.component';
+import { ErrorAlertComponent } from './notifications/error-alert/error-alert.component';
+import { InfoAlertComponent } from './notifications/info-alert/info-alert.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     SidebarComponent,
     SettingsComponent,
-    SuccessAlertComponent
+    SuccessAlertComponent,
+    ErrorAlertComponent,
+    InfoAlertComponent
   ],
   imports: [
     CommonModule,

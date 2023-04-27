@@ -1,8 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'src/app/styles/colors';
+@import 'src/app/styles/toasrt';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .toast-container{
-
     margin-top: 40px;
 }
+
+.toast-success {
+    background-color: $green;
+    color: #fff;
+    font-size: 13px;
+    opacity: 0.5;
+}
+  
+.toast-error {
+    background-color: $pink;
+    color: #fff;
+    font-size: 12px;
+}
+
+.toast-info {
+    background-color: $light-blue;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+

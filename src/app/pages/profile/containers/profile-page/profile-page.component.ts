@@ -20,11 +20,12 @@ export class ProfilePageComponent {
   getUsersData(){
     this.userService.getUsers().subscribe(
       users => {
-      this.notifyService.successMessage();
+      // this.notifyService.alertInfoMessage('Success', '');
+      this.notifyService.alertSuccessMessage('Success', '');
       this.userSource = users;
     },
       error => {
-        this.notifyService.errorMessage();
+        this.notifyService.alertErrorMessage('error', '');
       }
     )
   }

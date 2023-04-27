@@ -14,6 +14,7 @@ import { ProfileModule } from './pages/profile/profile.module';
 import { CommerceModule } from './pages/commerce/commerce.module';
 import { UserModule } from './pages/user/user.module';
 import { AuthModule } from './pages/auth/auth.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthModule } from './pages/auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
 
     DashboardModule,
     SharedModule,
@@ -31,6 +33,7 @@ import { AuthModule } from './pages/auth/auth.module';
     CommerceModule,
     UserModule,
     AuthModule,
+    ToastrModule,
 
     MatCardModule,
     MatButtonModule

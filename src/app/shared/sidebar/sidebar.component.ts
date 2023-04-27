@@ -36,6 +36,7 @@ export class SidebarComponent {
   treeControl = new NestedTreeControl<IMatNode>(node => node.children);
   dataSource = new MatTreeNestedDataSource<IMatNode>();
 
+  successMessage!: 'Success message';
 
   public routes: typeof routes = routes;
   public isOpenUiElements = false;
@@ -43,6 +44,7 @@ export class SidebarComponent {
 
   constructor(private router: Router) {
     this.dataSource.data = TREE_DATA;
+
   }
 
 

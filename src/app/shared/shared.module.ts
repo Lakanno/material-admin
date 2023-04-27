@@ -18,7 +18,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SettingsComponent } from './settings/settings.component';
-import { NotificationModule } from './notification/notification.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { NotificationModule } from './notification/notification.module';
     CommonModule,
     HeaderModule,
     RouterModule,
-    NotificationModule,
 
     MatSidenavModule,
     MatButtonModule,

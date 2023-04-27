@@ -27,12 +27,12 @@ import { Toast, ToastPackage, ToastrService } from 'ngx-toastr';
 
 export class SuccessAlertComponent extends Toast  {
 
-  override message!: string;
-
   constructor(protected override toastrService: ToastrService, public override toastPackage: ToastPackage){
     super(toastrService, toastPackage);
   }
 
-  
+  successMessageText(message: string){
+    return message;
+  }
 
 }

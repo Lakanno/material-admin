@@ -8,7 +8,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     CommonModule,
     UserRoutingModule,
     SharedModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   exports: [
     

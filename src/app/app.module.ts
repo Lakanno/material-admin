@@ -15,6 +15,7 @@ import { CommerceModule } from './pages/commerce/commerce.module';
 import { UserModule } from './pages/user/user.module';
 import { AuthModule } from './pages/auth/auth.module';
 import { ToastrModule } from 'ngx-toastr';
+import { SuccessAlertComponent } from './shared/notifications/success-alert/success-alert.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      toastComponent: SuccessAlertComponent
+    }),
 
     DashboardModule,
     SharedModule,

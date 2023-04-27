@@ -18,12 +18,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SuccessAlertComponent } from './notifications/success-alert/success-alert.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     SidebarComponent,
-    SettingsComponent
+    SettingsComponent,
+    SuccessAlertComponent
   ],
   imports: [
     CommonModule,

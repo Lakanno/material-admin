@@ -42,6 +42,15 @@ export class NotificationService {
     });
   }
 
+  alertWarningMessage(message: string, title: string){
+    this.toastr.warning(message, title, {
+      positionClass: 'toast-top-center',
+      timeOut: this.timeOut,
+      tapToDismiss: true,
+      closeButton: true
+    });
+  }
+
 
   // way 2
   successMessage(){

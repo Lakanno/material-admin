@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { HeaderService } from 'src/app/shared/services/header.service';
 import { routes } from '../../../../consts/routes';
 
 @Component({
@@ -13,8 +14,8 @@ export class HeaderComponent {
   @Input()isMenuOpened: boolean = false;
   @Output()isShowSidebar = new EventEmitter<boolean>();
   public user$!: Observable<any>
-
-  constructor(private router: Router){
+  language$ = this.headerService.chosenLanguage$;
+  constructor(private router: Router, private headerService: HeaderService){
 
   }
 
@@ -25,6 +26,10 @@ export class HeaderComponent {
 
   public signOut():void{
     this.router.navigate([this.routers.AUTH]);
+  }
+
+  languageSwitch(){
+    this.headerService.changeLanguage();
   }
 
 }

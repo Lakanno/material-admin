@@ -9,7 +9,12 @@
   
     <div class="header-toolbar">
       <app-user [user]="user$ | async" (signOut)="signOut()"></app-user>
+      <div class="nav-item hover" style="margin-left: 10px; cursor: pointer;" (click)="languageSwitch()">
+        <a class="nav-link"> Language: <strong style="color: rgb(0, 242, 255)">{{ language$ | async}}</strong> </a>
+      </div>
     </div>
+
+
   </mat-toolbar>
 
 

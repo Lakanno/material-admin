@@ -21,13 +21,13 @@ export class ProfilePageComponent {
     this.userService.getUsers().subscribe(
       users => {
       // this.notifyService.alertInfoMessage('Success', '');
+      // this.notifyService.alertWarningMessage('Success', '');
       this.notifyService.alertSuccessMessage('Success', '');
       this.userSource = users;
     },
       error => {
-        this.notifyService.alertErrorMessage('error', '');
+        this.notifyService.alertErrorMessage('error', error.status,);
       }
     )
   }
-
 }
